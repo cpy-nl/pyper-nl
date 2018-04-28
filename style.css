@@ -1,181 +1,248 @@
+@import url('https://fonts.googleapis.com/css?family=Share:700|Share|Ubuntu');
 
-@import url('https://fonts.googleapis.com/css?family=Share:700|Share');
-
-html, body{
-  height: 100%;
-}
+/*
+#ef5777 highlighter pink
+#f53b57 sizzling red
+#575fcf dark periwinkle
+#3c40c6 free speech blue
+*/
 
 body{
-  background: #d2dae2;
+  background: #F9F9FA;
   font-family: Arial;
   margin: 0;
+  padding:0;
 }
 
-svg {
-    display: block;
-    font: 8.5em 'Share', monospace;
-    font-weight: 700;
-    width: 100%;
-    height: 300px;
-    margin: 0 auto;
+h1 {
+  font: 8.5em 'Share', monospace;
+  font-weight: 700;
+  color: #F9F9FA;
+  background: -webkit-linear-gradient(-90deg,  #f53b57 5%, #ef5777 60%);
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 10px transparent;
+  margin:0;
 }
-
-.text-copy {
-    fill: none;
-    stroke: white;
-    stroke-dasharray: 12% 23%;
-    stroke-width: 3px;
-    stroke-dashoffset: 0%;
-    animation: stroke-offset 4.5s infinite linear;
-}
-
-.text-copy:nth-child(1){
-	stroke: #4D163D;
-  stroke: #ef5777;
-  stroke: #4bcffa;
-	animation-delay: -1;
-}
-
-.text-copy:nth-child(2){
-	stroke: #840037;
-  stroke: #f53b57;
-  stroke: #0fbcf9;
-	animation-delay: -2s;
-}
-
-.text-copy:nth-child(3){
-	stroke: #BD0034;
-  stroke: #ff5e57;
-  stroke: #34e7e4;
-	animation-delay: -3s;
-}
-
-.text-copy:nth-child(4){
-	stroke: #BD0034;
-  stroke: #ff3f34;
-  stroke: #00d8d6;
-	animation-delay: -4s;
-}
-
-.text-copy:nth-child(5){
-	stroke: #FDB731;
-  stroke: #ffa801;
-  stroke: #3c40c6;
-	animation-delay: -5s;
-}
-
-@keyframes stroke-offset{
-	100% {stroke-dashoffset: -35%;}
-}
-
-.content-box{
-  display: block;
+.content {
+  /* Sizing */
+  width: 100vw;
+  height: 100vh;
   box-sizing: border-box;
-  width: 600px;
-  margin: 0 auto;
-  margin-left: 10%;
+  /* Flexbox shiz */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
 }
+.hero {
+  /* Sizing */
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+  /* Flexbox scaling stuff */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-.content-box p{
-  font-family: 'Share', monospace;
-  font-weight: normal;
-  font-size: 18px;
-  color: rgba(0, 0, 0, 0.7);
-  line-height: 1.8;
+  /* Text style */
+  text-align: center;
+  position:relative;
+
+  /* Background image */
+  /*background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url('http://fanaru.com/doge/image/14008-doge-doge-is-moon.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;*/
 }
-.content-box a{
-  color: rgba(15, 188, 249, 1.0);
-  color: rgba(0, 0, 0, 0.9);
-  color: #0fbcf9;
-  text-decoration: none;
-  transition: color 350ms ease-in-out;
-  /*border-bottom: solid 2px rgba(15, 188, 249, 0.2);*/
-  /*transition: border 150ms ease-in-out;*/
-}
-.content-box a:hover{
-  /*border-bottom: solid 2px rgba(15, 188, 249, 1.0);*/
-  color: #4bcffa;
-}
-/*.content-box ul li{
-  font-family: 'Share', monospace;
-  font-size: 22px;
-  margin-bottom:5px;
-  color: rgba(0, 0, 0, 0.7);
-  opacity: 0;
-}
-.marker-text-bg{
-  background-color: rgba(0,0,0,0.7);
-  padding: .1rem .3rem;
-  color: #fff;
+
+.fas.fa-heart {
   display: inline-block;
-}*/
-
-.content-box ul li{
-  font-family: 'Share', monospace;
-  font-size: 22px;
-  margin-bottom:5px;
-  color: rgba(0,0,0,0.05);
-  opacity: 0;
+  color:#ef5777;
+  font-size:34px;
+  vertical-align:2px;
 }
-.marker-text-bg{
-  background-color: rgba(0,0,0,0.05);
-  padding: .1rem .3rem;
-  color: #000;
+
+.welcome {
+  box-sizing: border-box;
+  height:150px;
+}
+.welcome b {
+  float: left;
+  overflow: hidden;
+  position: relative;
+  height: 150px;
+}
+.welcome .welcome-inner {
+  box-sizing: border-box;
   display: inline-block;
+  color: #d2dae2;
+  position: relative;
+  white-space: nowrap;
+  top: 0;
+  left: 0;
+  text-align: left;
+
+/*animation*/
+-webkit-animation:once 3s;
+   -moz-animation:once 3s;
+    -ms-animation:once 3s;
+     -o-animation:once 3s;
+        animation:once 3s;
+/*animation-iteration-count*/
+-webkit-animation-iteration-count:1;
+   -moz-animation-iteration-count:1;
+    -ms-animation-iteration-count:1;
+     -o-animation-iteration-count:1;
+        animation-iteration-count:1;
+/*animation-delay*/
+-webkit-animation-delay:2s;
+   -moz-animation-delay:2s;
+    -ms-animation-delay:2s;
+     -o-animation-delay:2s;
+        animation-delay:2s;
+}
+.welcome-inner span {
+  font: 8em 'Ubuntu', monospace;
+  font-weight: 700;
+  color: #d2dae2;
 }
 
-.fa-li {
-  top:3px;
+.heart {
+  display: block;
+  float:left;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  box-sizing: border-box;
+  font: bold 40px/50px 'Ubuntu', sans-serif;
+  color: #d2dae2;
+}
+.heart p {
+  height: 50px;
+  float: left;
+  margin-right: 0.3em;
+  color: #d2dae2;
+}
+.heart b {
+  float: left;
+  overflow: hidden;
+  position: relative;
+  height: 50px;
+  top: 40px;
+}
+.heart .heart-inner {
+  box-sizing: border-box;
+  display: inline-block;
+  color: #d2dae2;
+  position: relative;
+  white-space: nowrap;
+  top: 0;
+  left: 0;
+  text-align: left;
+
+/*animation*/
+-webkit-animation:move 10s;
+   -moz-animation:move 10s;
+    -ms-animation:move 10s;
+     -o-animation:move 10s;
+        animation:move 10s;
+/*animation-iteration-count*/
+-webkit-animation-iteration-count:infinite;
+   -moz-animation-iteration-count:infinite;
+    -ms-animation-iteration-count:infinite;
+     -o-animation-iteration-count:infinite;
+        animation-iteration-count:infinite;
+/*animation-delay*/
+-webkit-animation-delay:1s;
+   -moz-animation-delay:1s;
+    -ms-animation-delay:1s;
+     -o-animation-delay:1s;
+        animation-delay:1s;
+}
+@keyframes move{
+  0%  { top: 0px; }
+  10%  { top: 0px; }
+  20% { top: -50px; }
+  30% { top: -50px; }
+  40% { top: -100px; }
+  50% { top: -100px; }
+  60% { top: -150px; }
+  70% { top: -150px; }
+  80% { top: -200px; }
+  90% { top: -200px; }
 }
 
-.fa-ul {
-  margin-left:0px; // adjustment to fa class
+@-webkit-keyframes move {
+  0%  { top: 0px; }
+  10%  { top: 0px; }
+  20% { top: -50px; }
+  30% { top: -50px; }
+  40% { top: -100px; }
+  50% { top: -100px; }
+  60% { top: -150px; }
+  70% { top: -150px; }
+  80% { top: -200px; }
+  90% { top: -200px; }
 }
-
-.content-box ul li.cl-one{
-	-webkit-animation: fade .25s ease-in-out forwards;
-	-webkit-animation-delay: 1s;
-	-moz-animation: fade .25s ease-in-out forwards;
-	-moz-animation-delay: 1s;
-	-o-animation: fade .25s ease-in-out forwards;
-	-o-animation-delay: 1s;
-	animation: fade .25s ease-in-out forwards;
-	animation-delay: .5s;
+@-moz-keyframes move {
+  0%  { top: 0px; }
+  10%  { top: 0px; }
+  20% { top: -50px; }
+  30% { top: -50px; }
+  40% { top: -100px; }
+  50% { top: -100px; }
+  60% { top: -150px; }
+  70% { top: -150px; }
+  80% { top: -200px; }
+  90% { top: -200px; }
 }
-.content-box ul li.cl-two{
-	-webkit-animation: fade .25s ease-in-out forwards;
-	-webkit-animation-delay: 2s;
-	-moz-animation: fade .25s ease-in-out forwards;
-	-moz-animation-delay: 2s;
-	-o-animation: fade .25s ease-in-out forwards;
-	-o-animation-delay: 2s;
-	animation: fade .25s ease-in-out forwards;
-	animation-delay: 2s;
+@-o-keyframes move {
+  0%  { top: 0px; }
+  10%  { top: 0px; }
+  20% { top: -50px; }
+  30% { top: -50px; }
+  40% { top: -100px; }
+  50% { top: -100px; }
+  60% { top: -150px; }
+  70% { top: -150px; }
+  80% { top: -200px; }
+  90% { top: -200px; }
 }
-.content-box .fa-ul li.cl-three{
-	-webkit-animation: fade .25s ease-in-out forwards;
-	-webkit-animation-delay: 5s;
-	-moz-animation: fade .25s ease-in-out forwards;
-	-moz-animation-delay: 5s;
-	-o-animation: fade .25s ease-in-out forwards;
-	-o-animation-delay: 5s;
-	animation: fade .25s ease-in-out forwards;
-	animation-delay: 5s;
+@keyframes move {
+  0%  { top: 0px; }
+  10%  { top: 0px; }
+  20% { top: -50px; }
+  30% { top: -50px; }
+  40% { top: -100px; }
+  50% { top: -100px; }
+  60% { top: -150px; }
+  70% { top: -150px; }
+  80% { top: -200px; }
+  90% { top: -200px; }
 }
-
-@-webkit-keyframes fade {
-	100% { opacity: 1; }
+/*welcome once animation*/
+@keyframes once{
+  0%  { top: 0px; }
+  33% { top: -150px; }
+  66% { top: -150px; }
 }
-
-@-moz-keyframes fade {
-	100% { opacity: 1; }
+@-webkit-keyframes once {
+  0%  { top: 0px; }
+  33% { top: -150px; }
+  66% { top: -150px; }
 }
-
-@-o-keyframes fade {
-	100% { opacity: 1; }
+@-moz-keyframes once {
+  0%  { top: 0px; }
+  33% { top: -150px; }
+  66% { top: -150px; }
 }
-
-@keyframes fade {
-	100% { opacity: 1; }
+@-o-keyframes once {
+  0%  { top: 0px; }
+  33% { top: -150px; }
+  66% { top: -150px; }
+}
+@keyframes once {
+  0%  { top: 0px; }
+  33% { top: -150px; }
+  66% { top: -150px; }
 }
