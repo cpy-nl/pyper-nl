@@ -2,20 +2,20 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
     <title>pyper.nl</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
   </head>
   <body>
     <section class="hero">
 
-        <div class="hero-inner">
+        <div class="hero-inner" id="welcome">
 
           <div class="welcome">
             <b>
               <div class="welcome-inner">
                 <h1>pyper.nl</h1><br>
-                <span>welkom</span>
+                <span>{{greeting[Math.floor(Math.random() * greeting.length)]}}</span>
               </div>
             </b>
           </div>
@@ -24,16 +24,22 @@
             <p>I <i class="fas fa-heart"></i></p>
             <b>
               <div class="heart-inner">
-                CSS<br>
-                JavaScript<br>
-                PHP<br>
-                Python<br>
-                Pizza<br>
+                <span v-for="item in randomList(speak)">{{item}}<br /></span>
               </div>
             </b>
           </div>
 
         </div>
+
+        <!-- <div class="footer">
+          <i class="fas fa-magic" style="vertical-align: -2px;"></i>
+          <span class="label">"works on my machine"</span>
+        </div> -->
+
     </section>
+
+    <script src="scroll.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <script src="app.js"></script>
   </body>
 </html>
